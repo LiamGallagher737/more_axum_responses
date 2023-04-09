@@ -1,6 +1,4 @@
 use axum_core::response::{IntoResponse, Response};
-use bytes::Bytes;
-use http_body::Full;
 
 macro_rules! responses {
     ($($name:ident, $content:literal, $description:literal;)*) => {
@@ -14,10 +12,10 @@ macro_rules! responses {
 
             impl<T> IntoResponse for $name<T>
             where
-                T: Into<Full<Bytes>>,
+                T: IntoResponse,
             {
                 fn into_response(self) -> Response {
-                    ([("content-type", $content)], self.0.into()).into_response()
+                    ([("content-type", $content)], self.0.into_response()).into_response()
                 }
             }
 
