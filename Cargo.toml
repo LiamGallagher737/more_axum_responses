@@ -1,0 +1,11 @@
+[package]
+name = "more_axum_responses"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum-core = "0.3"
+bytes = "1.4"
+http-body = "0.4"
