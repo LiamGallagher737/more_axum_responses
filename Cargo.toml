@@ -1,7 +1,12 @@
 [package]
 name = "more_axum_responses"
+description = "The not so popular MIME types."
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/LiamGallagher737/more_axum_responses"
+keywords = ["axum"]
+categories = ["network-programming"]
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
